@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book House</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-200 m-0 p-0">
+    <section>
+        <h1 class="text-center mt-16 font-bold text-4xl">BOOK HOUSE</h1>
+        <input id="input-field" class="ml-6 mt-12 px-3 w-64 rounded py-1 border-2 border-gray-500" type="text">
+        <button class="ml-2 text-gray-200 bg-gray-600 rounded mt-12 px-3 w-24 py-1 border-2 border-transparent" onclick="getBooks()">Search</button>
+        <h1 class="ml-6 text-2xl font-semibold mt-8">Total result:<span class="text-blue-600" id="results"></span>
+        </h1>
+    </section>
+    <section id="book-container" class="grid grid-cols-4 gap-3 mt-12 mx-6">
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
