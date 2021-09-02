@@ -6,23 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book House</title>
+    <!-- tailwind -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-gray-200 m-0 p-0">
     <section>
         <h1 class="text-center mt-16 font-bold text-4xl">BOOK HOUSE</h1>
+        <!-- search input -->
         <input id="input-field" class="ml-6 mt-12 px-3 w-72 rounded py-1 border-2 border-gray-500" type="text">
+        <!-- search button -->
         <button class="ml-2 text-gray-200 bg-gray-600 rounded mt-12 px-3 w-24 py-1 border-2 border-transparent" onclick="getBooks()">Search</button>
+        <!-- error message -->
         <p class="ml-6" id="error">Please input a book name...</p>
+        <!-- book counter -->
         <h1 class="ml-6 text-2xl font-semibold mt-8">Book found:<span class="text-blue-600" id="results"></span>
         </h1>
+        <!-- not found message -->
         <h2 class="text-6xl mt-20 text-gray-400 w-72 mx-auto" id="not-found">Not found</h2>
     </section>
+    <!-- All books container -->
     <section id="book-container" class="grid grid-cols-4 gap-3 mt-12 mx-6">
     </section>
-
+    <!-- script -->
     <script src="js/index.js"></script>
 </body>
 

@@ -1,5 +1,6 @@
 document.getElementById('error').style.display = 'none';
 document.getElementById('not-found').style.display = 'none';
+//getting books
 const getBooks = () => {
     const searchField = document.getElementById('input-field');
     const searchText = searchField.value;
@@ -16,18 +17,19 @@ const getBooks = () => {
     searchField.value = '';
 };
 const haveBooks = books => {
-    console.log(books);
     const results = document.getElementById('results');
+    // book counter
     results.innerText = `${books.docs.length}`
     const container = document.getElementById('book-container');
     const booksSelf = books.docs;
+    // clear container
     container.textContent = '';
     if (books.docs == 0) {
         document.getElementById('not-found').style.display = 'block';
     } else {
         document.getElementById('not-found').style.display = 'none';
         booksSelf.forEach(book => {
-            // console.log(book);
+            // creating div
             const div = document.createElement('div');
             div.classList.add('border', 'border-black', 'rounded', 'p-3', 'block');
             div.innerHTML = `
